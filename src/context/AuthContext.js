@@ -4,7 +4,7 @@ const AuthContext = createContext(null);
 
 // Simple in-memory user store for demo purposes
 const USERS = [
-  { username: 'alice', password: 'password123', displayName: 'Alice' },
+  { username: 'son', password: 'password123', displayName: 'Jayson' },
   { username: 'bob', password: 'hunter2', displayName: 'Bob' },
 ];
 

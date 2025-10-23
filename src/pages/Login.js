@@ -28,7 +28,7 @@ export default function Login() {
   }
 
   return (
-    <div className="container">
+    <div className="web-container">
       <form onSubmit={handleSubmit} className="login-card" aria-labelledby="login-title">
         <h2 id="login-title">Login</h2>
         {error && <div className="error" role="alert">{error}</div>}
@@ -49,7 +49,7 @@ export default function Login() {
           </button>
         </div>
 
-        <div className="helper">Try <strong>alice/password123</strong> or <strong>bob/hunter2</strong></div>
+        <div className="helper">Try <strong>son/password123</strong> or <strong>bob/hunter2</strong></div>
       </form>
     </div>
   )
