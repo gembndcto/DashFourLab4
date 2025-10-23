@@ -1,13 +1,17 @@
 import React from 'react'
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 export default function ProtectedRoute({ children }) {
-    const isAuthenticated = false; // TODO: Replace with real authentication check for the bonus task and make a /login component
-    const location = useLocation();
+	const auth = useAuth()
+	const location = useLocation()
 
-    if (!isAuthenticated) {
-        return <Navigate to="/" state={{ from: location  }} replace />;
-    }
+	// If auth is still loading (restoring from storage), don't redirect yet
+	if (auth?.loading) return null
 
-    return children;
+	if (!auth?.user) {
+		return <Navigate to="/login" state={{ from: location }} replace />
+	}
+
+	return children
 }
