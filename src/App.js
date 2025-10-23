@@ -8,6 +8,7 @@ import Product from './pages/Product'
 import NotFound from './pages/NotFound'
 import ProtectedRoute from './components/ProtectedRoute'
 import { AuthProvider } from './context/AuthContext'
+import ProductDetail from './pages/ProductDetail'
 
 function App() {
 	return (
@@ -25,6 +26,14 @@ function App() {
 									<Product />
 								</ProtectedRoute>
 							}
+						/>
+						<Route
+						path='/products/:id'
+						element={
+							<ProtectedRoute>
+								<ProductDetail />
+							</ProtectedRoute>
+						}
 						/>
 						<Route path="*" element={<NotFound />} />
 					</Routes>

@@ -4,7 +4,7 @@ function Home() {
 	return (
 		<div className="web-container">
 			<div className="home-wrapper">
-				<div className="home-card">
+				<div className="card">
 					<div className='container'>
 						<h1>Welcome🚪</h1>
 						<p className='subtitle'>This page is a purposively for Laboratory Activity #4 - Web Development through React – Routing and Navigation</p>
