@@ -12,11 +12,11 @@ function Navbar() {
                 <NavLink to="/product">Product</NavLink>
             </div>
 
-            <div style={{ float: 'right' }}>
+            <div className='nav-right user-info'>
                 {auth?.user ? (
                     <>
                         <span style={{ marginRight: 8 }}>Hello, {auth.user.displayName || auth.user.username}</span>
-                        <button onClick={auth.logout} style={{ cursor: 'pointer' }}>Logout</button>
+                        <button onClick={auth.logout}>Logout</button>
                     </>
                 ) : (
                     <NavLink to="/login">Login</NavLink>

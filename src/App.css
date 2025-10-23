@@ -1,4 +1,6 @@
 nav {
+  display: flex;
+  align-items: center;
   background-color: #222;
   padding: 1rem;
 }
@@ -11,6 +13,27 @@ nav {
 .nav-links > * {
   color: white;
   text-decoration: none;
+}
+
+.nav-right {
+  margin-left: auto; /* push to the right in the flex container */
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.nav-right > * {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-right button {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .container {
@@ -31,6 +54,11 @@ nav {
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: var(--card-bg-color);
+}
+
+.user-info {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .loader {
