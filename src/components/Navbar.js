@@ -15,11 +15,12 @@ function Navbar() {
             <div className='nav-right user-info'>
                 {auth?.user ? (
                     <>
-                        <span style={{ marginRight: 8 }}>Hello, {auth.user.displayName || auth.user.username}</span>
-                        <button onClick={auth.logout}>Logout</button>
+                        <div className="avatar">{(auth.user.displayName || auth.user.username).charAt(0).toUpperCase()}</div>
+                        <div className="username">{auth.user.displayName || auth.user.username}</div>
+                        <button onClick={auth.logout} className="btn">Logout</button>
                     </>
                 ) : (
-                    <NavLink to="/login">Login</NavLink>
+                    <NavLink className="nav-link" to="/login">Login</NavLink>
                 )}
             </div>
         </nav>

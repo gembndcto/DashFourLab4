@@ -28,18 +28,28 @@ export default function Login() {
 
   return (
     <div className="container">
-      <form onSubmit={handleSubmit} className="home-card" style={{ minWidth: 280 }}>
-        <h2>Login</h2>
-        {error && <div style={{ color: 'salmon', marginBottom: 8 }}>{error}</div>}
-        <input value={username} onChange={e => setUsername(e.target.value)} placeholder="username" />
-        <input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="password" />
-        <button type="submit" disabled={loading || !username || !password}>
-          {loading ? 'Signing in...' : 'Sign in'}
-        </button>
+      <form onSubmit={handleSubmit} className="login-card" aria-labelledby="login-title">
+        <h2 id="login-title">Login</h2>
+        {error && <div className="error" role="alert">{error}</div>}
+
+        <div className="form-row">
+          <label htmlFor="username" style={{ color: '#ddd', fontSize: 13 }}>Username</label>
+          <input id="username" className="input" value={username} onChange={e => setUsername(e.target.value)} placeholder="Enter username" />
+        </div>
+
+        <div className="form-row">
+          <label htmlFor="password" style={{ color: '#ddd', fontSize: 13 }}>Password</label>
+          <input id="password" className="input" type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Enter password" />
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <button type="submit" className="btn btn-primary" disabled={loading || !username || !password}>
+            {loading ? <><span className="spinner"/>Signing in...</> : 'Sign in'}
+          </button>
+        </div>
+
+        <div className="helper">Try <strong>alice/password123</strong> or <strong>bob/hunter2</strong></div>
       </form>
-      <div style={{ marginTop: 12, fontSize: 13, color: '#666' }}>
-        Try <strong>alice/password123</strong> or <strong>bob/hunter2</strong>
-      </div>
     </div>
   )
 }
