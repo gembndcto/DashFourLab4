@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { LuBadgeAlert } from 'react-icons/lu'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import '../assets/Login.css'
@@ -49,7 +50,7 @@ export default function Login() {
           </button>
         </div>
 
-        <div className="helper">Try <strong>son/password123</strong> or <strong>bob/hunter2</strong></div>
+        <div className="helper"> <LuBadgeAlert size={24} /> Try <strong>son/password123</strong> or <strong>bob/hunter2</strong></div>
       </form>
     </div>
   )
