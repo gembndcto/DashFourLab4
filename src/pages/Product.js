@@ -9,6 +9,18 @@ export const PRODUCTS = [
 ]
 
 export default function Product() {
+
+	if( !PRODUCTS.length ) {
+		return (
+			<div className='web-container'>
+				<div className='card'>
+					<p className='subtitle'>No products available</p>
+				</div>
+			</div>
+		)
+	}
+
+
 	return (
 		<div className="web-container">
 			<div className="card">
