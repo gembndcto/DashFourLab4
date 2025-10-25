@@ -1,0 +1,28 @@
+/* Navbar.css */
+nav {
+  background-color: #1e293b; /* dark navy blue */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+  color: #f1f5f9; /* light gray text */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #38bdf8; /* light blue hover */
+  transform: scale(1.05);
+}
+
+.active-link {
+  color: #38bdf8; /* highlight for active page */
+  border-bottom: 2px solid #38bdf8;
+}
