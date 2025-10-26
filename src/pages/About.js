@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div style={{ padding: '20px' }}>
       <h1>About Page</h1>
-      <p>This is the About page for our React application.</p>
+      <p>This is a simple React application demonstrating routing with React Router.</p>
     </div>
   );
 };
