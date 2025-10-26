@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../components/ProtectedRoute';
 const Dashboard = () => {
   return (
     <div style={{ padding: '20px' }}>

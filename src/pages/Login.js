@@ -1,12 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../components/ProtectedRoute';
 
 const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Simulate login logic
-    localStorage.setItem('isAuthenticated', 'true');
+    localStorage.setItem('isAuthenticated', 'false');
     navigate('/dashboard');
   };
 
