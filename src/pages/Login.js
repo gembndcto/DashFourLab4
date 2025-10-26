@@ -5,7 +5,6 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    // Simulate login logic
     localStorage.setItem('isAuthenticated', 'true');
     navigate('/dashboard');
   };
