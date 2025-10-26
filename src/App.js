@@ -15,7 +15,6 @@ function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Check authentication status on app load
     const authStatus = localStorage.getItem('isAuthenticated');
     setIsAuthenticated(authStatus === 'true');
   }, []);
