@@ -6,7 +6,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    localStorage.setItem('isAuthenticated', 'false');
+    localStorage.setItem('isAuthenticated', 'true');
     navigate('/dashboard');
   };
 
