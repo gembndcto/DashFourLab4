@@ -89,7 +89,6 @@
   animation: float 3s ease-in-out infinite;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .error-code {
     font-size: 5rem;
